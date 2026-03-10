@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+struct FRACAO{
+    int numerardor;
+    int denominador;
+};
+
+int main(){
+    FRACAO num1,num2,den1,den2;
+    int n = 0;
+    int fracaonumerador;
+    int fracaodenominador;
+    cin>> n;
+    for(int i;i<n;i++){
+        cin >>num1.numerardor>>den1.denominador >>num2.numerardor>>den2.denominador;
+        cout<<(num1.numerardor * num2.numerardor)<< "/"<<(den1.denominador* den2.denominador)<< endl;
+    }
+    
+
+
+    return 0;
+}
