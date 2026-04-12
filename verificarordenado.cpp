@@ -20,7 +20,7 @@ int main(){
     }
     return 0;
 }
-
+// implementaçao da funçao
 bool ordenado(int v[MAX],int n){
     for(int i = 0;i<n-1;i++){
         if(v[i]>v[i+1]){
