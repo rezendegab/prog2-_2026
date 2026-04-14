@@ -60,5 +60,5 @@ int insere_R(int n,int v[MAX],int k,int x){
         return n + 1;
     }
     v[n] = v[n-1];
-    return insere_R(n-1,v,k,x);
+    return insere_R(n-1,v,k,x)+1;
 }
