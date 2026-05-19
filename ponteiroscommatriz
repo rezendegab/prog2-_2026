@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+#define MAX 100
+
+void identidade(int, int[MAX][MAX]);
+void imprimeMatriz(int, int[MAX][MAX]);
+
+int main(){
+    int n, v[MAX][MAX];
+
+    cin >> n;
+
+    identidade(n, v);
+    imprimeMatriz(n, v);
+
+    return 0;
+}
+
+void identidade(int n, int v[MAX][MAX]){
+    int *p;
+    int pos, lin, col;
+
+    for(p = &v[0][0]; p < (&v[0][0] + n*n); p++){
+
+        pos = p - &v[0][0];
+
+        lin = pos / n;
+        col = pos % n;
+
+        if(lin == col)
+            *p = 1;
+        else
+            *p = 0;
+    }
+}
+
+void imprimeMatriz(int n, int v[MAX][MAX]){
+
+    for(int i = 0; i < n; i++){
+
+        for(int j = 0; j < n; j++){
+
+            cout << v[i][j] << " ";
+        }
+
+        cout << endl;
+    }
+}
