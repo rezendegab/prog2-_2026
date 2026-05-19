@@ -2,7 +2,7 @@
 using namespace std;
 
 #define MAX 100
-
+//protipaçao de funçao
 void identidade(int, int[MAX][MAX]);
 void imprimeMatriz(int, int[MAX][MAX]);
 
@@ -16,22 +16,23 @@ int main(){
 
     return 0;
 }
-
+//implementaçao da funçao
 void identidade(int n, int v[MAX][MAX]){
     int *p;
     int pos, lin, col;
 
-    for(p = &v[0][0]; p < (&v[0][0] + n*n); p++){
+    for(p = &v[0][0]; p < (&v[0][0] + MAX*MAX); p++){
 
         pos = p - &v[0][0];
 
-        lin = pos / n;
-        col = pos % n;
-
-        if(lin == col)
-            *p = 1;
-        else
-            *p = 0;
+        lin = pos / MAX;
+        col = pos % MAX;
+        if(lin<n&&col<n){
+            if(lin ==  col)
+                *p = 1;
+            else
+                *p = 0;
+        }
     }
 }
 
