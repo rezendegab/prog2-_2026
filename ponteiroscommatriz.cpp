@@ -21,7 +21,7 @@ void identidade(int n, int v[MAX][MAX]){
     int *p;
     int pos, lin, col;
 
-    for(p = &v[0][0]; p < (&v[0][0] + MAX*MAX); p++){
+    for(p = &v[0][0]; p <= (&v[0][0] + MAX*MAX); p++){
 
         pos = p - &v[0][0];
 
