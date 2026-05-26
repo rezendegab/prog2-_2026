@@ -2,7 +2,7 @@
 using namespace std;
 #define MAX 100
 
-// prototipaçao das funçoes quicksort e partition
+// prototipaçao das funçoes quicksort,partition,troca e imprime
 void quickSort(int,int,string[]);
 int partition(int,int,string[]);
 void troca(string*,string*);
@@ -20,7 +20,7 @@ int main(){
     
     return 0;
 }
-//implmentaçao das funçoes quicksort e partition e imprime
+//implmentaçao das funçoes quicksort,partition, imprime
 void quickSort(int p,int r,string nomes[MAX]){
     if(p<r){
         int q = partition(p,r,nomes);
@@ -46,4 +46,10 @@ void troca(string *a,string *b){
     aux = *a;
     *a = *b;
     *b = aux;
+}
+void imprime(int n,string nomes[MAX]){
+    for(int i =0;i<n;i++){
+        cout<<nomes[i]<<endl;
+    }
+    cout<<endl;
 }
