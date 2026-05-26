@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 #define MAX 100
-
+//prototipaçao da funçao negativos
 int negativos(float*vet,int N);
 
 int main(){
@@ -14,9 +14,9 @@ int main(){
     negativos(vet,N);
     return 0;
 }
-
+//implementaçao da funçao negativos
 int negativos(float *vet,int N){
-    int acha = 0;
+    int acha = 0;//variavel para achar negativos
     for(int i = 0;i<N;i++){
         if(vet[i]<0){
             acha++;
